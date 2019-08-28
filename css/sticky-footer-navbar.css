@@ -16,17 +16,13 @@ html {
     height: 50px;
     line-height: 50px; /* Vertically center the text there */
     background-color: #f5f5f5;
+    text-align: center
   }
 
-  .btn-outline-github {
-    color: #333;
-    border-color: #333;
+.jumbotron{
+  padding: 4, 1;
 }
 
-.fab {
-  font-family: "Font Awesome 5 Brands";
-}
-
-.fa-github:before {
-  content: "\f09b";
+.text-center {
+  text-align: center!important;
 }
