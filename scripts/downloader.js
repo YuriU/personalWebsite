@@ -4,6 +4,7 @@ downloadResume = function() {
     client.responseType = 'blob';
 
     client.onload = function() {
+        document.body.style.cursor = 'default';
         if(client.status === 200) {
             var contentType = client.getResponseHeader('Content-Type');
             var contentDisposition = client.getResponseHeader('Content-Disposition');
@@ -20,6 +21,11 @@ downloadResume = function() {
         }
     }
 
+    client.onerror = function() {
+        document.body.style.cursor = 'default';
+    }
+
+    document.body.style.cursor = 'wait';
     client.send('');
 }
 
