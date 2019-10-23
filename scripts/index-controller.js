@@ -30,7 +30,7 @@ var indexController = {
         this.uiElements.downloadButton.click(function (e) {
             var button = $(this);
             button.attr("disabled", true);
-            //document.body.style.cursor = 'wait';
+            document.body.style.cursor = 'wait';
 
             var requestUrl = that.data.config.apiBaseUrl + '?cmd=requestDownload';
 
@@ -38,8 +38,11 @@ var indexController = {
                 url: requestUrl,
                 type: 'POST',
                 data: null,
-                processData: false,
-                contentType: false,
+                xhr:function() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.responseType= 'blob'
+                    return xhr;
+                },
             }).done(function (response, status, xhr) {
                 
                 console.log(status);
@@ -58,13 +61,13 @@ var indexController = {
                 link.click();
                 document.body.removeChild(link);
 
-                //document.body.style.cursor = 'default';
+                document.body.style.cursor = 'default';
                 button.attr("disabled", false);
 
             }).fail(function (response) {
                 
                 button.attr("disabled", false);
-                //document.body.style.cursor = 'default';
+                document.body.style.cursor = 'default';
             })
         });
     }
