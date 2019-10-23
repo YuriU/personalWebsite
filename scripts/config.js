@@ -1,3 +1,3 @@
 var configConstants = {
-    apiBaseUrl = "https://api.yuriiulianets.dev/webSiteBackend"
+    apiBaseUrl :  "https://api.yuriiulianets.dev/webSiteBackend"
 };

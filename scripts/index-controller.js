@@ -12,8 +12,11 @@ var indexController = {
         this.uiElements.downloadButton = $('#btn-download-resume');
         this.uiElements.downloadButton.click(function (e) {
             var button = $(this);
-            button.attr("disabled", true);
-            
+            button.attr("disabled", true);  
+
+            setTimeout(function(){
+                button.attr("disabled", false);
+              }, 5000);
         });
     },
     getContentDispositionFileName: function(disposition, defaultFileName) {

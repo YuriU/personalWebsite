@@ -39,3 +39,11 @@
 .btn-outline-hackerrank:disabled {
   color:#1ba94c;background-color:transparent
 }
+
+.btn-primary:disabled .bnt-enabled-state {
+  display: none;
+}
+
+.btn-primary:enabled .bnt-disabled-state {
+  display: none;
+}
