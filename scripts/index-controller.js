@@ -68,6 +68,7 @@ var indexController = {
                 
                 button.attr("disabled", false);
                 document.body.style.cursor = 'default';
+                alert('Something bad has happened. Please contact me directly');
             })
         });
     }
