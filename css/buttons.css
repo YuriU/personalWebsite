@@ -47,3 +47,7 @@
 .btn-primary:enabled .bnt-disabled-state {
   display: none;
 }
+
+.jumbotron {
+  padding: 2rem 2rem;
+}
